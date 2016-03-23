@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0.beta2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -31,8 +31,6 @@ gem 'jbuilder', '~> 1.2'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc, require: false
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
-gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -47,3 +45,26 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'fullcalendar_engine'
+
+group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'sqlite3'
+end
+
+group :development, :test do
+  gem 'byebug'
+end
+
+group :test do
+  gem 'simplecov'
+  gem 'cucumber-rails', :require => false
+  gem 'capybara'
+  gem 'rspec'
+  gem 'factory_girl'
+  gem 'database_cleaner'
+end
+
+group :production do
+  gem 'pg'
+end
