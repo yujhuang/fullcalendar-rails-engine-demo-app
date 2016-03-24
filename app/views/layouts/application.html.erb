@@ -5,6 +5,11 @@
   <title>FcTest</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+  
+  <%= javascript_include_tag src:'//fullcalendar.io/js/fullcalendar-2.2.0/lib/moment.min.js' %>
+  <%= javascript_include_tag src:'//fullcalendar.io/js/fullcalendar-2.2.0/lib/jquery.min.js'%>
+  <%= javascript_include_tag src:"//fullcalendar.io/js/fullcalendar-2.2.0/lib/jquery-ui.custom.min.js"%>
+  <%= javascript_include_tag src:'//fullcalendar.io/js/fullcalendar-2.2.0/fullcalendar.min.js'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
